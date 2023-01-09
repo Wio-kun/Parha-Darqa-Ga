@@ -9,9 +9,9 @@
 
         <?php
 
-        $£ = 0,82;
-        $€ = 0,94;
-        $¥ = 132,44;
+        $£ = 0.82;
+        $€ = 0.94;
+        $¥ = 132.44;
         $Skrift1 = "Cash";
         $Skrift2 = "Street";
 
@@ -35,47 +35,9 @@
         echo "<br><br>";
 
         echo "$tekst <br>";
-        echo $bra_tekst;
+        echo "$bra_tekst <br>";
 
-        ?>
-
-    </body>
-
-</html>
-
-<!doctype html>
-<html>
-
-    <head>
-
-    </head>
-
-    <body>
-
-        <?php
-
-        $tall1 = 17;
-        $tall2 = 9;
-        $tekst1 = "Karl";
-        $tekst2 = "Johan";
-
-        $sum = $tall1 + $tall2;
-        $differanse = $tall1 - $tall2;
-        $produkt = $tall1 * $tall2;
-        $kvotient = $tall1 / $tall2;
-
-        $langTekst = $tekst1 . $tekst2;
-        $bedreTekst = $tekst1 . " " . $tekst2 . "s gate";
-
-        echo "Summen blir $sum <br>";
-        echo "Differansen blir $differanse <br>";
-        echo "Produktet blir $produkt <br>";
-        echo "Kvotienten blir $kvotient <br>";
-
-        echo "<br><br>";
-
-        echo "$langTekst <br>";
-        echo $bedreTekst;
+        echo "<a href='https://www.iban.com/currency-converter?from_currency=JPY&to_currency=EUR&amount=1'>Valuta</a>";
 
         ?>
 
