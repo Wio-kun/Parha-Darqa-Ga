@@ -14,6 +14,7 @@
         $¥ = 132.44;
         $Skrift1 = "Cash";
         $Skrift2 = "Street";
+        $fødsel = 2006
 
         $sammensatt = $£ + $€ + $¥;
         $forskjell1 = $£ - $€;
@@ -37,7 +38,47 @@
         echo "$tekst <br>";
         echo "$bra_tekst <br>";
 
-        echo "<a href='https://github.com/Wio-kun/Haru-Karusu-Mas'>Chungus Toasters</a>";
+        echo "<a href='https://github.com/Wio-kun/Haru-Karusu-Mas'>Chungus Toasters</a> <br>";
+        
+        $date = date("m");
+        echo "$date <br>";
+        if($date == 01) {
+            echo "Januar"
+        }
+        else if ($date ==02) {
+            echo "Februar"
+        }
+        else if ($date ==03) {
+            echo "Mars"
+        }
+        else if ($date ==04) {
+            echo "April"
+        }
+        else if ($date ==05) {
+            echo "Mai"
+        }
+        else if ($date ==06) {
+            echo "Juni"
+        }
+        else if ($date ==07) {
+            echo "Juli"
+        }
+        else if ($date ==08) {
+            echo "August"
+        }
+        else if ($date ==09) {
+            echo "September"
+        }
+        else if ($date ==10) {
+            echo "Oktober"
+        }
+        else if ($date ==11) {
+            echo "November"
+        }
+        else if ($date ==12) {
+            echo "Desember"
+        }
+
 
         ?>
 
