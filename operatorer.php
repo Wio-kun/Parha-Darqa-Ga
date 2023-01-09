@@ -37,7 +37,7 @@
         echo "$tekst <br>";
         echo "$bra_tekst <br>";
 
-        echo "<a href='https://www.iban.com/currency-converter?from_currency=JPY&to_currency=EUR&amount=1'>Valuta</a>";
+        echo "<a href='https://github.com/Wio-kun/Haru-Karusu-Mas'>Chungus Toasters</a>";
 
         ?>
 
