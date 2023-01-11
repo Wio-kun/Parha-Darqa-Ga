@@ -14,7 +14,6 @@
         $¥ = 132.44;
         $Skrift1 = "Cash";
         $Skrift2 = "Street";
-        $fødsel = 2006
 
         $sammensatt = $£ + $€ + $¥;
         $forskjell1 = $£ - $€;
@@ -38,46 +37,108 @@
         echo "$tekst <br>";
         echo "$bra_tekst <br>";
 
-        echo "<a href='https://github.com/Wio-kun/Haru-Karusu-Mas'>Chungus Toasters</a> <br>";
+        echo "<a href='https://www.dnb.no/en/markets/fx-and-ir/currency-converter'>Valutakalkulator</a> <br>";
         
         $date = date("m");
         echo "$date <br>";
-        if($date == 01) {
-            echo "Januar"
+        if($date == "01") {
+            echo "Januar";
         }
-        else if ($date ==02) {
-            echo "Februar"
+        else if ($date == "02") {
+            echo "Februar";
         }
-        else if ($date ==03) {
-            echo "Mars"
+        else if ($date == "03") {
+            echo "Mars";
         }
-        else if ($date ==04) {
-            echo "April"
+        else if ($date == "04") {
+            echo "April";
         }
-        else if ($date ==05) {
-            echo "Mai"
+        else if ($date == "05") {
+            echo "Mai";
         }
-        else if ($date ==06) {
-            echo "Juni"
+        else if ($date == "06") {
+            echo "Juni";
         }
-        else if ($date ==07) {
-            echo "Juli"
+        else if ($date == "07") {
+            echo "Juli";
         }
-        else if ($date ==08) {
-            echo "August"
+        else if ($date == "08") {
+            echo "August";
         }
-        else if ($date ==09) {
-            echo "September"
+        else if ($date == "09") {
+            echo "September";
         }
-        else if ($date ==10) {
-            echo "Oktober"
+        else if ($date == "10") {
+            echo "Oktober";
         }
-        else if ($date ==11) {
-            echo "November"
+        else if ($date == "11") {
+            echo "November";
         }
-        else if ($date ==12) {
-            echo "Desember"
+        else if ($date == "12") {
+            echo "Desember";
         }
+
+        echo "<br><br>";
+
+        $fødsel = 2006;
+
+
+
+        $år = date("Y");
+        $alder = $år - $fødsel;
+
+        if($alder == 18) {
+            echo "Du er 18";
+        }
+        else if ($alder > 18) {
+            echo "Du er eldre enn 18";
+        }
+        else if ($alder < 18) {
+            echo "Du er yngre enn 18";
+        }
+
+        echo "<br><br>";
+
+        $tall = 0;
+        $tall42 = 0;
+        $tallx2 = 0;
+        
+        while ($tall <= 15) {
+            echo "$tall. <br>";
+            $tall = $tall + 1;
+        }
+
+        echo "<br>";
+
+        for ($i=0; $i<=15; $i++) {
+            echo "  $i. <br>";
+        }
+
+        echo "<br>";
+
+        while ($tall42 <= 42) {
+            echo "IT1. <br>";
+            $tall42 = $tall42 + 1;
+        }
+
+        echo "<br>";
+
+        for ($im=0; $im<=42; $im++) {
+            echo "IT1. <br>";
+        }
+
+        echo "<br>";
+
+        while ($tallx2 <= 20) {
+            echo "$tallx2 <br>";
+            $tallx2 += 2;
+        }
+
+        $tr = 0;
+        $th = 0;
+        $td = 0;
+        
+        while ($tr)
 
 
         ?>
