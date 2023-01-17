@@ -2,10 +2,15 @@
 
 $random_tall = rand(1,1500);
 
-echo "$random_tall";
 
 if ($random_tall == 666) {
     echo "<p>Vennene dine kommer til å ha et satanisk ritual for å få djevelen til huset ditt på Julaften.</p>";
+}else if ($random_tall == 110) {
+    echo "<p>Fulle gale Norske brannmenn</p>";
+}else if ($random_tall == 112) {
+    echo "Fulle gale Norske politimenn</p>";
+}else if ($random_tall == 113) {
+    echo "Fulle gale Norske leger</p>";
 }else if ($random_tall == 911) {
     echo "<p>911 whats your emergancy</p>";
 }else if ($random_tall < 150) {
