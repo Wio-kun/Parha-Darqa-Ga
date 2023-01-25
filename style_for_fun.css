@@ -1,0 +1,46 @@
+body {
+    background-color: #6B627A;
+}
+.alt {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: fit-content;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: fit-content;
+    align-content: center;
+}
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+.linker {
+    background-color: #7AA183;
+    display: flex;
+    flex-wrap: wrap;
+    height: 3000px;
+    width: 15%;
+}
+.innhold {
+    background-color: #B57272;
+    display: flex;
+    flex-wrap: wrap;
+    height: 3000px;
+    width: 85%;
+}
+h1 {
+    color: #E1DC5D;
+}
+.overskrift {
+    font-size: 75px;
+    width: fit-content;
+}
+.gyro {
+    width: fit-content;
+    height: fit-content;
+}
