@@ -23,6 +23,8 @@ body {
     background-color: #7AA183;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
     height: 3000px;
     width: 15%;
 }
@@ -30,6 +32,8 @@ body {
     background-color: #B57272;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
     height: 3000px;
     width: 85%;
 }
@@ -40,7 +44,27 @@ h1 {
     font-size: 75px;
     width: fit-content;
 }
-.gyro {
+.iazoiw {
     width: fit-content;
     height: fit-content;
 }
+.iazoiw_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.beach {
+    width: fit-content;
+    height: fit-content;
+}
+button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 75px;
+    width: 330px;
+    background-color: #8F83A2;
+    border: none;
+}
+
