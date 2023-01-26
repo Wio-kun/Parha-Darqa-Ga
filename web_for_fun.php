@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>Character Review</title>
+        <title>Iazoiw</title>
         <link rel="stylesheet" href="style_for_fun.css">
     </head>
 
