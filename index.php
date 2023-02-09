@@ -17,7 +17,7 @@
     
     echo "<table id='bosses'>
             <tr>
-                <th></th>
+                <th>Id</th>
                 <th>Zone</th>
                 <th>Doungeon</th>
                 <th>Element</th>
