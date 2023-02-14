@@ -31,31 +31,41 @@
     
     while($rad = $resultat->fetch_assoc()){
         $id_rb = $rad['id_remembrance_bosses'];
-        $zone = $rad['zone'];
+        $er_zone = $rad['er_zone'];
         $doungeon = $rad['doungeon'];
         $element = $rad['element'];
         $race = $rad['race'];
-        $name = $rad['name'];
+        $b_name = $rad['boss_name'];
         $title = $rad['title'];
         $m_parent = $rad['m_parent'];
         $f_parent = $rad['f_parent'];
-        $recommended_lvl = $rad['recommended_lvl'];
+        $r_lvl = $rad['recommended_lvl'];
     
         echo "<tr>
                 <td>$id_rb</td>
-                <td>$zone</td>
+                <td>$er_zone</td>
                 <td>$doungeon</td>
                 <td>$element</td>
                 <td>$race</td>
-                <td>$name</td>
+                <td>$b_name</td>
                 <td>$title</td>
                 <td>$m_parent</td>
                 <td>$f_parent</td>
-                <td>$recommended_lvl</td>
+                <td>$r_lvl</td>
+                <td><a href='boss.php?boss_id=$id_rb'> link </a></td>
+                <td>
+                    <form method='post' action='slett.php'>
+                    <input type='hidden' name='slett_id' value='$id_rb'>
+                    <input type='submit' value='X'>
+                    </form>
+                </td>
              </tr>";
     }
 
-    echo "</table>";
+    echo "</table><br>";
     ?>
+
+    <a href="insert.php"><button class="insert"><h4>Add character to database</h4></button></a>
+
 </body>
 </html>

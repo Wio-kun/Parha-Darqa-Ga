@@ -20,3 +20,13 @@
   background-color: #04AA6D;
   color: white;
 }
+.insert {
+  background-color: #04AA6D;
+  width: 200;
+  border: #ddd;
+}
+h4 {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
