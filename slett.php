@@ -8,19 +8,19 @@
 </head>
 <body> 
     <?php
-        if(isset($_POST["slett_id"])) {
-            $slett_id = $_POST["slett_id"];
+        if(isset($_POST["delete_id"])) {
+            $delete_id = $_POST["delete_id"];
             include "azure.php";
         }else {
-            die("You have to assing a boss");
+            die("You have to assign a boss");
         }
-        $sql = "DELETE FROM bosses WHERE slett_id='slett_id'";
+        $sql = "DELETE FROM bosses WHERE delete_id='$delete_id'";
 
         if($con->query($sql)) {
             echo "Spørringen $sql ble gjennomført.";
         
         }else {
-            echo "Something went wrong douring the $sql ($con->error.";
+            echo "Something went wrong douring the $sql ($con->error).";
         }
 
     ?>

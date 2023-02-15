@@ -12,7 +12,7 @@
 
     $id_link = $_GET['boss_id'];
 
-    $sql = "SELECT * FROM boss WHERE id_remmembrance_bossses='$id_link'";
+    $sql = "SELECT * FROM boss WHERE id_rem embrance_bosses='$id_link'";
     $resultat = $con->query($sql);
     $rad = $resultat->fetch_assoc();
         $id_rb = $rad['id_remembrance_bosses'];

@@ -55,7 +55,7 @@
                 <td><a href='boss.php?boss_id=$id_rb'> link </a></td>
                 <td>
                     <form method='post' action='slett.php'>
-                    <input type='hidden' name='slett_id' value='$id_rb'>
+                    <input type='hidden' name='delete_id' value='$id_rb'>
                     <input type='submit' value='X'>
                     </form>
                 </td>
