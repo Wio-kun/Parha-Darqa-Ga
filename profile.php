@@ -1,9 +1,9 @@
     <?php
     include "azure.php";
 
-    #$id_link = $_GET['idbruker'];
+    $id_link = $_GET['idbruker'];
 
-    $sql = "SELECT * FROM bruker WHERE idbruker='6'";
+    $sql = "SELECT * FROM bruker WHERE idbruker='$id_link'";
     $resultat = $con->query($sql);
     $rad = $resultat->fetch_assoc();
         $idbruker = $rad['idbruker'];
@@ -17,6 +17,7 @@
         $occupation = $rad['skole'];
         $residence = $rad['bosted'];
         $bd = $rad['fodselsdato'];
+        $profile_pic = $rad['profilbilde'];
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -24,7 +25,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php echo "$brukernavn";?></title>
+        <title><?php echo "$usna";?></title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -39,7 +40,8 @@
         <h2>$tlf</h2><br>
         <h2>$occupation</h2><br>
         <h2>$residence</h2><br>
-        <h2>$bd</h2><br>";
+        <h2>$bd</h2><br>
+        <img class='profile_pic' src='img/$profile_pic' alt=''>";
     ?>
 </body>
 </html>
