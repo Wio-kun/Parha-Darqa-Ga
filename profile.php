@@ -32,15 +32,15 @@
     <?php
     echo "
     <div class='profildiv'>
-        <h1>$usna</h1><br>
-        <h2>$name $sname</h2><br>
-        <h2>$bio</h2><br>
-        <h2>$password</h2><br>
-        <h2>$email</h2><br>
-        <h2>$tlf</h2><br>
-        <h2>$occupation</h2><br>
-        <h2>$residence</h2><br>
-        <h2>$bd</h2><br>
+        <h1 style ='font-size:50px'>$usna</h1><br>
+        <div class='profile_info'><h2>$name $sname</h2><br></div>
+        <div class='profile_info'><h2>$bio</h2><br></div>
+        <div class='profile_info'><h2>$password</h2><br></div>
+        <div class='profile_info'><h2>$email</h2><br></div>
+        <div class='profile_info'><h2>$tlf</h2><br></div>
+        <div class='profile_info'><h2>$occupation</h2><br></div>
+        <div class='profile_info'><h2>$residence</h2><br></div>
+        <div class='profile_info'><h2>$bd</h2><br></div>
         <img class='profile_pic' src='img/$profile_pic' alt=''>";
     ?>
 </body>

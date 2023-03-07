@@ -10,7 +10,7 @@
 <body>
     <div class="all">
         <div class="header">
-            <h1>M.A.D</h1>
+            <h1 style ="font-size:65px">M.A.D</h1>
         </div>
         <?php
         include "azure.php";
@@ -22,11 +22,11 @@
             $iduser = $rad['idbruker'];
             $usna = $rad['brukernavn'];
 
-            echo "<div class='profiles'><a href='profile.php?idbruker=$iduser'><button class='users'><p>$usna</p></button></a><br></div>";
+            echo "<div class='profiles'><a href='profile.php?idbruker=$iduser'><p style ='font-size:25px'>$usna</p></a><br></div>";
         }
         ?>
 
-        <div class="add"><a href="newuser.php"><button class="insert"><h4>Add user to database</h4></button></a></div>
+        <div class="add"><a href="newuser.php"><button class="insert"><h4 style="font-size:25px">Add user to database</h4></button></a></div>
     </div>
 </body>
 </html>

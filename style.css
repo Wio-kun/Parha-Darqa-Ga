@@ -25,15 +25,26 @@ h1 {
 }
 h2 {
     color: #E1DC5D;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.profile_info {
+    border: 2px;
 }
 h3 {
     color: #E1DC5D;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 h4 {
     color: #E1DC5D;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 p {
     color: #E1DC5D;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 .profiles {
     display: flex;
@@ -42,6 +53,7 @@ p {
     align-content: center;
     text-align: center;
     width: fit-content;
+    background-color: #B57272;
 }
 .add {
     align-self: center;
@@ -49,8 +61,26 @@ p {
 .insert {
     border: none;
     background-color: #7AA183;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .users {
     border: none;
-    background-color: #8F83A2;
+    background-color: #B57272;
+}
+.profildiv {
+    background-color: #B57272;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 2000px;
 }
