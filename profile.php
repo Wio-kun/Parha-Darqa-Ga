@@ -32,16 +32,39 @@
     <?php
     echo "
     <div class='profildiv'>
-        <h1 style ='font-size:50px'>$usna</h1><br>
-        <div class='profile_info'><h2>$name $sname</h2><br></div>
-        <div class='profile_info'><h2>$bio</h2><br></div>
-        <div class='profile_info'><h2>$password</h2><br></div>
-        <div class='profile_info'><h2>$email</h2><br></div>
-        <div class='profile_info'><h2>$tlf</h2><br></div>
-        <div class='profile_info'><h2>$occupation</h2><br></div>
-        <div class='profile_info'><h2>$residence</h2><br></div>
-        <div class='profile_info'><h2>$bd</h2><br></div>
-        <img class='profile_pic' src='img/$profile_pic' alt=''>";
+        <div class='profile_info'><h1 style ='font-size:65px'>$name $sname</h1><br></div>
+        <div class='user'>
+            <h1 style ='font-size:100px'>$usna</h1>
+            <img class='profile_pic' src='img/$profile_pic' alt=''>
+        </div>
+        <div class='info_row'>
+            <div class='info'>
+                <div class='profile_info'><h2>$password</h2><br></div>
+                <div class='profile_info'><h2>$email</h2><br></div>
+                <div class='profile_info'><h2>$tlf</h2><br></div>
+                <div class='profile_info'><h2>$occupation</h2><br></div>
+                <div class='profile_info'><h2>$residence</h2><br></div>
+                <div class='profile_info'><h2>$bd</h2><br></div>
+            </div>
+            <div class='bio'><h2>$bio</h2><br></div>
+        </div>";
+        
     ?>
+    <div class='upload'>
+        <?php
+            $id = $id_link;
+            include "upload_img.php";
+        ?>
+    <div class='bilde_div'>
+        <?php
+            $sql = "SELECT * FROM media WHERE idbruker='$id_link' ";
+            $resultat = $con->query($sql); # henter ut fra DB
+
+            while($rad = $resultat->fetch_assoc()) { # loop gjennom alle brukere
+                $media_navn = $rad['media_navn'];  
+                echo "<img class='bilder'src='img/$media_navn'>";
+            }
+        ?>
+    </div>
 </body>
 </html>

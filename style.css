@@ -66,10 +66,6 @@ p {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.users {
-    border: none;
-    background-color: #B57272;
-}
 .profildiv {
     background-color: #B57272;
     display: flex;
@@ -83,4 +79,34 @@ p {
     margin-left: 5%;
     margin-right: 5%;
     height: 2000px;
+}
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+img {
+    border-radius: 50%;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+}
+.bio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+.info_row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.bilder {
+    width: 75px;
+    height: 75px;
 }
