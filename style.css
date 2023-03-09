@@ -1,6 +1,7 @@
 body {
     background-color: #6B627A;
     margin-top: 0%;
+    margin-bottom: 0%;
 }
 .all {
     background-color: #B57272;
@@ -66,19 +67,29 @@ p {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.profildiv {
+.content {
     background-color: #B57272;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 2000px;
+}
+.profile_div {
+    display: flex;
     flex-direction: column;
     align-content: center;
     text-align: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 2000px;
+}
+.side_color {
+    background-color: #7AA183;
+    height: 2000;
+    width: 200px;
 }
 .user {
     display: flex;
@@ -86,20 +97,32 @@ p {
     justify-content: space-between;
     margin-bottom: 20px;
 }
-img {
+.profile_pic {
+    display: flex;
     border-radius: 50%;
+    border: 3px solid #E1DC5D;
 }
 .info {
     display: flex;
     flex-direction: column;
     text-align: left;
     width: 50%;
+    padding-top: 10px;
 }
 .bio {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 50%;
+    background-color: #6B627A;
+    padding-top: 25px;
+    border-radius: 25%;
+    border: 3px solid #E1DC5D;
+}
+.bio_text {
+    width: 200px;
+    text-align: left;
+    align-self: center;
 }
 .info_row {
     display: flex;
@@ -109,4 +132,13 @@ img {
 .bilder {
     width: 75px;
     height: 75px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 7px;
+}
+.img_div {
+    width: 600px;
+}
+img {
+    border-radius: 25%;
 }

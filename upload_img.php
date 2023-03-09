@@ -29,19 +29,19 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
             echo $sql;
             $insert = $con->query($sql);
             if($insert){
-                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+                $statusMsg = "<p>The file ".$fileName. " has been uploaded successfully.</p>";
             }else{
-                $statusMsg = "File upload failed, please try again. <br>($conn->error)";
+                $statusMsg = "<p>File upload failed, please try again.</p> <br>($conn->error)";
                 
             } 
         }else{
-            $statusMsg = "Sorry, there was an error uploading your file.";
+            $statusMsg = "<p>Sorry, there was an error uploading your file.</p>";
         }
     }else{
-        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+        $statusMsg = '<p>Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.</p>';
     }
 }else{
-    $statusMsg = 'Please select a file to upload.';
+    $statusMsg = '<p>Please select a file to upload.</p>';
 }
  
 // Display status message

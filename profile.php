@@ -29,42 +29,53 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <?php
-    echo "
-    <div class='profildiv'>
-        <div class='profile_info'><h1 style ='font-size:65px'>$name $sname</h1><br></div>
-        <div class='user'>
-            <h1 style ='font-size:100px'>$usna</h1>
-            <img class='profile_pic' src='img/$profile_pic' alt=''>
-        </div>
-        <div class='info_row'>
-            <div class='info'>
-                <div class='profile_info'><h2>$password</h2><br></div>
-                <div class='profile_info'><h2>$email</h2><br></div>
-                <div class='profile_info'><h2>$tlf</h2><br></div>
-                <div class='profile_info'><h2>$occupation</h2><br></div>
-                <div class='profile_info'><h2>$residence</h2><br></div>
-                <div class='profile_info'><h2>$bd</h2><br></div>
-            </div>
-            <div class='bio'><h2>$bio</h2><br></div>
-        </div>";
+    <div class='content'>
+        <div class="side_color"></div>
+        <div class='profile_div'>
+            <?php
+            echo"
+                <div class='profile_info'><h1 style ='font-size:65px'>$name $sname</h1><br></div>
+                <div class='user'>
+                    <h1 style ='font-size:100px'>$usna</h1>
+                    <img class='profile_pic' src='img/$profile_pic' alt=''>
+                </div>
+                <div class='info_row'>
+                    <div class='info'>
+                        <div class='profile_info'><h2>$password</h2><br></div>
+                        <div class='profile_info'><h2>$email</h2><br></div>
+                        <div class='profile_info'><h2>$tlf</h2><br></div>
+                        <div class='profile_info'><h2>$occupation</h2><br></div>
+                        <div class='profile_info'><h2>$residence</h2><br></div>
+                        <div class='profile_info'><h2>$bd</h2><br></div>
+                    </div>
+                    <div class='bio'>
+                        <div class='bio_text'>
+                            <h2>Bio:</h2>
+                            <h2>$bio</h2><br>
+                        </div>
+                    </div>
+                </div>";
         
-    ?>
-    <div class='upload'>
-        <?php
-            $id = $id_link;
-            include "upload_img.php";
-        ?>
-    <div class='bilde_div'>
-        <?php
-            $sql = "SELECT * FROM media WHERE idbruker='$id_link' ";
-            $resultat = $con->query($sql); # henter ut fra DB
+            ?>
+            <div class='upload'>
+                <?php
+                    $id = $id_link;
+                    include "upload_img.php";
+                ?>
+            </div>
+            <div class='img_div'>
+                <?php
+                    $sql = "SELECT * FROM media WHERE idbruker='$id_link' ";
+                    $resultat = $con->query($sql); # henter ut fra DB
 
-            while($rad = $resultat->fetch_assoc()) { # loop gjennom alle brukere
-                $media_navn = $rad['media_navn'];  
-                echo "<img class='bilder'src='img/$media_navn'>";
-            }
-        ?>
+                    while($rad = $resultat->fetch_assoc()) { # loop gjennom alle brukere
+                        $media_navn = $rad['media_navn'];  
+                        echo "<img class='bilder'src='img/$media_navn'>";
+                    }
+                ?>
+            </div>
+        </div>
+        <div class="side_color"></div>
     </div>
 </body>
 </html>
