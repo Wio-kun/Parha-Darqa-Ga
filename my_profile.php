@@ -1,12 +1,12 @@
-    <?php
+<?php
     session_start();
     include "go_login.php";
-
+    
     include "azure.php";
 
-    $id_link = $_GET['idbruker'];
+    $id = $_SESSION['login_id'];
 
-    $sql = "SELECT * FROM bruker WHERE idbruker='$id_link'";
+    $sql = "SELECT * FROM bruker WHERE idbruker='$id'";
     $resultat = $con->query($sql);
     $rad = $resultat->fetch_assoc();
         $idbruker = $rad['idbruker'];
@@ -61,11 +61,12 @@
         
             ?>
             <?php 
+            include "innlegg.php";
             echo "<br>";
             ?>
             <div class='post_div'>
                 <?php
-                    $sql = "SELECT * FROM innlegg WHERE idbruker='$id_link' ";
+                    $sql = "SELECT * FROM innlegg WHERE idbruker='$id' ";
                     $resultat = $con->query($sql); 
 
                     while($rad = $resultat->fetch_assoc()) { 
@@ -77,12 +78,12 @@
             </div>
             <div class='upload'>
                 <?php
-                    $id = $id_link;
+                    include "upload_img.php";
                 ?>
             </div>
             <div class='img_div'>
                 <?php
-                    $sql = "SELECT * FROM media WHERE idbruker='$id_link' ";
+                    $sql = "SELECT * FROM media WHERE idbruker='$id' ";
                     $resultat = $con->query($sql); # henter ut fra DB
 
                     while($rad = $resultat->fetch_assoc()) { # loop gjennom alle brukere

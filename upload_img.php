@@ -1,6 +1,10 @@
 <form method="post" enctype="multipart/form-data">
     <h3>Select Image File to Upload:</h3><br>
-    <input type="file" name="file">
+    <label for="file-upload" class="custom-file-upload">
+        Add file
+    </label>
+    <input id="file-upload" type="file" name="file">
+    
     <input type="submit" name="submit" value="Upload"><br><br>
 </form>
  
@@ -31,7 +35,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
             if($insert){
                 $statusMsg = "<p>The file ".$fileName. " has been uploaded successfully.</p>";
             }else{
-                $statusMsg = "<p>File upload failed, please try again.</p> <br>($conn->error)";
+                $statusMsg = "<p>File upload failed, please try again.</p> <br>($con->error)";
                 
             } 
         }else{

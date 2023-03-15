@@ -9,12 +9,10 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 2000px;
+    padding: 0%;
+    margin: 0%;
+    height: 3000px;
+    width: 700px;
 }
 .header {
     text-align: center;
@@ -78,17 +76,18 @@ p {
     padding-bottom: 0px;
     margin-left: 10%;
     margin-right: 10%;
-    height: 2000px;
+    height: 3000px;
 }
 .profile_div {
     display: flex;
     flex-direction: column;
     align-content: center;
     text-align: center;
+    width: 700px;
 }
 .side_color {
     background-color: #7AA183;
-    height: 2000;
+    height: 3000px;
     width: 200px;
 }
 .user {
@@ -101,6 +100,8 @@ p {
     display: flex;
     border-radius: 50%;
     border: 3px solid #E1DC5D;
+    width: 306px;
+    height: 306px;
 }
 .info {
     display: flex;
@@ -120,7 +121,8 @@ p {
     border: 3px solid #E1DC5D;
 }
 .bio_text {
-    width: 200px;
+    width: 290px;
+    height: 225px;
     text-align: left;
     align-self: center;
 }
@@ -137,8 +139,35 @@ p {
     padding-top: 7px;
 }
 .img_div {
-    width: 600px;
+    width: 700px;
 }
 img {
     border-radius: 25%;
+    object-fit: cover;
+}
+.newuser {
+    align-content: center;
+    height: 3000px;
+}
+input {
+    background-color: #7AA183;
+    cursor: pointer;
+}
+.home {
+    background-color: #7AA183;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    display: inline-block;
+    padding: 1px 6px;
+    cursor: pointer;
+    background-color: #7AA183;
+}
+button {
+    cursor: pointer;
 }
