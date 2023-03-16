@@ -152,6 +152,8 @@ img {
 input {
     background-color: #7AA183;
     cursor: pointer;
+    height: 24.33px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .home {
     background-color: #7AA183;
@@ -170,4 +172,22 @@ input[type="file"] {
 }
 button {
     cursor: pointer;
+}
+label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+.on_line {
+    display: flex;
+    flex-direction: row;
+    height: 24.33px;
+    justify-content: center;
+}
+.upload {
+    font-size: 13px;
+
+    margin-left: 2.5px;
+    margin-right: 2.5px;
 }

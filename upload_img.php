@@ -1,11 +1,12 @@
 <form method="post" enctype="multipart/form-data">
     <h3>Select Image File to Upload:</h3><br>
-    <label for="file-upload" class="custom-file-upload">
-        Add file
-    </label>
-    <input id="file-upload" type="file" name="file">
-    
-    <input type="submit" name="submit" value="Upload"><br><br>
+    <div class="on_line">
+        <label for="file-upload" class="custom-file-upload">
+            Add file
+        </label>
+        <input id="file-upload" type="file" name="file">
+        <input class="upload" type="submit" name="submit" value="Upload">
+    </div><br><br>
 </form>
  
 <?php
