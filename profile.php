@@ -77,7 +77,10 @@
                         $text = $rad['tekst'];
                         $date = $rad['date'];
                         $idinnlegg = $rad['idinnlegg'];
-                        echo "<p>$text</p><br>";
+                        echo "
+                        <div class='user_post'>
+                            <img class='profile_pic_mini' src='img/$profile_pic' alt=''> <h3 class='post_text'>$text</h3><br>
+                        </div>";
 
                         include "comment.php";
 
