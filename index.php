@@ -33,7 +33,10 @@ include "go_login.php";
             }
             ?>
 
-            <div class="add"><a href="newuser.php"><button class="insert"><h4 style="font-size:25px">Add user to database</h4></button></a></div>
+            <div class="add"><a href="newuser.php"><button class="insert"><h4 style="font-size:25px">Add user to database</h4></button></a></div><br>
+            <form class="so_form" action="signout.php" method="POST">
+                <input class="signout" type="submit" value="Signout" />
+            </form>
         </div>
         <div class="side_color"></div>
     </div>

@@ -1,7 +1,8 @@
 
 
     <form action="" method="post">
-        Text: <input type="text" name="tekst"><br><br>
+        <h2>Post:</h2>
+        <input type="text" name="tekst"><br>
         <input type="submit" name="innlegg_tekst" value="Write post">
     </form>
 

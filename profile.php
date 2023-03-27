@@ -6,6 +6,11 @@
 
     $id_link = $_GET['idbruker'];
 
+    if ($id_link == $_SESSION['login_id']) {
+        header("Refresh:0; url=my_profile.php", true, 303);
+        die();
+    }
+
     $sql = "SELECT * FROM bruker WHERE idbruker='$id_link'";
     $resultat = $con->query($sql);
     $rad = $resultat->fetch_assoc();
@@ -69,8 +74,32 @@
                     $resultat = $con->query($sql); 
 
                     while($rad = $resultat->fetch_assoc()) { 
-                        $text = $rad['tekst'];  
-                        echo "<p>$text</p>";
+                        $text = $rad['tekst'];
+                        $date = $rad['date'];
+                        $idinnlegg = $rad['idinnlegg'];
+                        echo "<p>$text</p><br>";
+
+                        include "comment.php";
+
+                        echo "
+                            <form action='' method='POST'>
+                                <input type='text' name='comments'><br>
+                                <input type='hidden' name='idinnlegg' value='$idinnlegg'>
+                                <input type='submit' name='comment_upload' value='Comment'><br><br>
+                            </form>";
+                    }
+                    if(isset($_POST["comment_upload"])) {
+                        $text=$_POST["comments"];
+                        $idinnlegg=$_POST["idinnlegg"];
+                        $id = $_SESSION['login_id'];
+
+                        $sql = "INSERT INTO innlegg_kommentar (tekst, idbruker, idinnlegg, date) VALUES ('$text', '$id_link', $idinnlegg, now() )";
+                    
+                        if($con->query($sql)) {
+                            echo "Comment was added to the database";
+                        } else {
+                            echo "error: $con->error";
+                        }
                     }
                     echo "<br>";
                 ?>
@@ -88,6 +117,7 @@
                     while($rad = $resultat->fetch_assoc()) { # loop gjennom alle brukere
                         $media_navn = $rad['media_navn'];  
                         echo "<img class='bilder'src='img/$media_navn'>";
+                        include "go_login.php";
                     }
                     echo "<br><br>";
                 ?>

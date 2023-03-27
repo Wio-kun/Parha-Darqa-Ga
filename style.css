@@ -90,11 +90,27 @@ p {
     height: 3000px;
     width: 200px;
 }
+.post_div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+.post_text {
+    margin-left: 1.5px;
+}
 .user {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+.user_post {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
 }
 .profile_pic {
     display: flex;
@@ -102,6 +118,14 @@ p {
     border: 3px solid #E1DC5D;
     width: 306px;
     height: 306px;
+}
+.profile_pic_mini {
+    display: flex;
+    border-radius: 50%;
+    border: 1.75px solid #E1DC5D;
+    width: 25px;
+    height: 25px;
+    margin-right: 1.5px;
 }
 .info {
     display: flex;
@@ -190,4 +214,11 @@ label {
 
     margin-left: 2.5px;
     margin-right: 2.5px;
+}
+.signout {
+    border: none;
+}
+.so_form {
+    width: 55.8px;
+    align-self: center;
 }

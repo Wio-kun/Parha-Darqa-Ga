@@ -70,8 +70,35 @@
                     $resultat = $con->query($sql); 
 
                     while($rad = $resultat->fetch_assoc()) { 
-                        $text = $rad['tekst'];  
-                        echo "<p>$text</p>";
+                        $text = $rad['tekst'];
+                        $date = $rad['date'];
+                        $idinnlegg = $rad['idinnlegg'];
+                        echo "
+                        <div class='user_post'>
+                            <img class='profile_pic_mini' src='img/$profile_pic' alt=''> <h3 class='post_text'>$text</h3><br>
+                        </div>";
+
+                        include "comment.php";
+
+                        echo "
+                            <form action='' method='POST'>
+                                <input type='text' name='comments'><br>
+                                <input type='hidden' name='idinnlegg' value='$idinnlegg'>
+                                <input type='submit' name='comment_upload' value='Comment'><br><br>
+                            </form>";
+                    }
+                    if(isset($_POST["comment_upload"])) {
+                        $text=$_POST["comments"];
+                        $idinnlegg=$_POST["idinnlegg"];
+                        $id = $_SESSION['login_id'];
+
+                        $sql = "INSERT INTO innlegg_kommentar (tekst, idbruker, idinnlegg, date) VALUES ('$text', '$id_link', $idinnlegg, NOW() )";
+                    
+                        if($con->query($sql)) {
+                            echo "Comment was added to the database";
+                        } else {
+                            echo "error: $con->error";
+                        }
                     }
                     echo "<br>";
                 ?>
