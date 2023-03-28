@@ -92,7 +92,7 @@
                         $idinnlegg=$_POST["idinnlegg"];
                         $id = $_SESSION['login_id'];
 
-                        $sql = "INSERT INTO innlegg_kommentar (tekst, idbruker, idinnlegg, date) VALUES ('$text', '$id_link', $idinnlegg, NOW() )";
+                        $sql = "INSERT INTO innlegg_kommentar (tekst, idbruker, idinnlegg, date) VALUES ('$text', '$id', $idinnlegg, NOW() )";
                     
                         if($con->query($sql)) {
                             echo "Comment was added to the database";
@@ -114,8 +114,11 @@
                     $resultat = $con->query($sql); # henter ut fra DB
 
                     while($rad = $resultat->fetch_assoc()) { # loop gjennom alle brukere
-                        $media_navn = $rad['media_navn'];  
-                        echo "<img class='bilder'src='img/$media_navn'>";
+                        $media_navn = $rad['media_navn'];
+                        $idmedia = $rad['idmedia'];
+                        echo "<a href='imageshow.php?media_id=$idmedia'>
+                                <img class='bilder'src='img/$media_navn'>
+                              </a>";
                     }
                     echo "<br><br>";
                 ?>

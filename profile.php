@@ -4,14 +4,14 @@
 
     include "azure.php";
 
-    $id_link = $_GET['idbruker'];
+    $id = $_GET['idbruker'];
 
-    if ($id_link == $_SESSION['login_id']) {
+    if ($id == $_SESSION['login_id']) {
         header("Refresh:0; url=my_profile.php", true, 303);
         die();
     }
 
-    $sql = "SELECT * FROM bruker WHERE idbruker='$id_link'";
+    $sql = "SELECT * FROM bruker WHERE idbruker='$id'";
     $resultat = $con->query($sql);
     $rad = $resultat->fetch_assoc();
         $idbruker = $rad['idbruker'];
@@ -70,7 +70,7 @@
             ?>
             <div class='post_div'>
                 <?php
-                    $sql = "SELECT * FROM innlegg WHERE idbruker='$id_link' ";
+                    $sql = "SELECT * FROM innlegg WHERE idbruker='$id' ";
                     $resultat = $con->query($sql); 
 
                     while($rad = $resultat->fetch_assoc()) { 
@@ -96,7 +96,7 @@
                         $idinnlegg=$_POST["idinnlegg"];
                         $id = $_SESSION['login_id'];
 
-                        $sql = "INSERT INTO innlegg_kommentar (tekst, idbruker, idinnlegg, date) VALUES ('$text', '$id_link', $idinnlegg, now() )";
+                        $sql = "INSERT INTO innlegg_kommentar (tekst, idbruker, idinnlegg, date) VALUES ('$text', '$id', $idinnlegg, now() )";
                     
                         if($con->query($sql)) {
                             echo "Comment was added to the database";
@@ -108,18 +108,18 @@
                 ?>
             </div>
             <div class='upload'>
-                <?php
-                    $id = $id_link;
-                ?>
             </div>
             <div class='img_div'>
                 <?php
-                    $sql = "SELECT * FROM media WHERE idbruker='$id_link' ";
+                    $sql = "SELECT * FROM media WHERE idbruker='$id' ";
                     $resultat = $con->query($sql); # henter ut fra DB
 
                     while($rad = $resultat->fetch_assoc()) { # loop gjennom alle brukere
-                        $media_navn = $rad['media_navn'];  
-                        echo "<img class='bilder'src='img/$media_navn'>";
+                        $media_navn = $rad['media_navn'];
+                        $idmedia = $rad['idmedia'];
+                        echo "<a href='imageshow.php?media_id=$idmedia'>
+                                <img class='bilder'src='img/$media_navn'>
+                              </a>";
                         include "go_login.php";
                     }
                     echo "<br><br>";

@@ -127,6 +127,21 @@ p {
     height: 25px;
     margin-right: 1.5px;
 }
+.image_show {
+    margin-top: 100px;
+}
+.big_image {
+    width: 601px;
+    height: 601px;
+}
+.comments_image {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    margin-top: 25px;
+}
 .info {
     display: flex;
     flex-direction: column;

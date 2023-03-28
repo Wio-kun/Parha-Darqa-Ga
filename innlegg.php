@@ -12,7 +12,7 @@ include "azure.php";
 if(isset($_POST["innlegg_tekst"])) {
     $text=$_POST["tekst"];
 
-    $sql = "INSERT INTO innlegg (tekst, idbruker, date) VALUES ('$text', '$id_link', NOW() )";
+    $sql = "INSERT INTO innlegg (tekst, idbruker, date) VALUES ('$text', '$id', NOW() )";
     echo $sql;
     $insert = $con->query($sql);
 
