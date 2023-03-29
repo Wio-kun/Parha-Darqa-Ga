@@ -1,7 +1,8 @@
-body {
+html,body {
     background-color: #6B627A;
     margin-top: 0%;
     margin-bottom: 0%;
+    height: 100%;
 }
 .all {
     background-color: #B57272;
@@ -11,7 +12,6 @@ body {
     align-content: center;
     padding: 0%;
     margin: 0%;
-    height: 3000px;
     width: 700px;
 }
 .header {
@@ -76,7 +76,7 @@ p {
     padding-bottom: 0px;
     margin-left: 10%;
     margin-right: 10%;
-    height: 3000px;
+    min-height: 100%;
 }
 .profile_div {
     display: flex;
@@ -87,7 +87,7 @@ p {
 }
 .side_color {
     background-color: #7AA183;
-    height: 3000px;
+
     width: 200px;
 }
 .post_div {
