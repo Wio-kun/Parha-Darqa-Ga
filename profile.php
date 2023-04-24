@@ -1,17 +1,17 @@
     <?php
-    session_start();
+    session_start(); #starter en session for å holde deg logget på
     include "go_login.php";
 
     include "azure.php";
 
     $id = $_GET['idbruker'];
 
-    if ($id == $_SESSION['login_id']) {
+    if ($id == $_SESSION['login_id']) { #kaster deg ut om du ikke er logget inn
         header("Refresh:0; url=my_profile.php", true, 303);
         die();
     }
 
-    $sql = "SELECT * FROM bruker WHERE idbruker='$id'";
+    $sql = "SELECT * FROM bruker WHERE idbruker='$id'"; #henter fra database
     $resultat = $con->query($sql);
     $rad = $resultat->fetch_assoc();
         $idbruker = $rad['idbruker'];
@@ -33,13 +33,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php echo "$usna";?></title>
+        <title><?php echo "$usna";?></title> <!--bruker brukernavn som tittel-->
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <div class='content'>
-        <div class="side_color"></div>
-        <div class='profile_div'>
+    <div class='content'><!--for å ha row på de tre divene inni-->
+        <div class="side_color"></div><!--for utsene-->
+        <div class='profile_div'><!--for å holde styr på alt-->
             <?php
             echo"
                 <div class='profile_info'><h1 style ='font-size:65px'>$name $sname</h1><br></div>
@@ -126,8 +126,8 @@
                 ?>
             </div>
             <a href="index.php"><button class="insert"><h4 style="font-size:25px">Go back to home</h4></button></a>
-        </div>
-        <div class="side_color"></div>
-    </div>
+        </div><!--slutt på profile_div-->
+        <div class="side_color"></div><!--for utsene-->
+    </div><!--slutt på content-->
 </body>
 </html>
